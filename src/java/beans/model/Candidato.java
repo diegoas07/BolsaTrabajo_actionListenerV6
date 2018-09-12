@@ -30,6 +30,7 @@ public class Candidato {
     private String ciudad;
     private String colonia;
     private String codigoPostal;
+    private String comentario;
     /**
      * Get the value of nombre
      *
@@ -137,5 +138,21 @@ public class Candidato {
     public void setCodigoPostal(String codigoPostal) {
         this.codigoPostal = codigoPostal;
     }
+
+    /**
+     * @return the comentario
+     */
+    public String getComentario() {
+        return comentario;
+    }
+
+    /**
+     * @param comentario the comentario to set
+     */
+    public void setComentario(String comentario) {
+        this.comentario = comentario;
+    }
+
+
 
 }

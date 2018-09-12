@@ -105,6 +105,30 @@
                     
                 </tbody>
             </table>
+            
+                        <table>
+                <tr>
+                    <td>
+                        <h:commandLink actionListener="#{vacanteForm.ocultaComentario}" immediate="true" rendered="#{!vacanteForm.comentarioEnviado}" value="#{msgs['vacanteForm.mostrar']}"/>
+                        <h:commandLink actionListener="#{vacanteForm.ocultaComentario}" immediate="true" rendered="#{vacanteForm.comentarioEnviado}" value ="#{msgs['vacanteForm.ocultar']}"/>
+                    </td>
+                </tr>
+            </table>
+            <h:panelGroup rendered="#{vacanteForm.comentarioEnviado}">
+                <table>
+                    <tr>
+                        <td>
+                            <h:outputLabel for="comentario" value="#{msgs['vacanteForm.comentario']}"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h:inputTextarea id="comentario" cols="50" rows="10" value="#{candidato.comentario}"/>
+                        </td>
+                    </tr>
+                </table>
+            </h:panelGroup>
+            
             <br/>
             <h:commandButton action="#{vacanteForm.enviar}" value="#{msgs['vacanteForm.Enviar']}"/>
         </h:form>
