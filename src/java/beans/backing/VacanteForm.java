@@ -13,6 +13,7 @@ import javax.faces.bean.RequestScoped;
 import javax.faces.component.UIInput;
 import javax.faces.component.UIViewRoot;
 import javax.faces.context.FacesContext;
+import javax.faces.event.ActionEvent;
 import javax.faces.event.ValueChangeEvent;
 
 /**
@@ -32,6 +33,8 @@ public class VacanteForm {
     @ManagedProperty(value = "#{candidato}")
     private Candidato candidato;
 
+    private boolean comentarioEnviado = false;
+    
     /**
      * @return the candidato
      */
@@ -90,6 +93,24 @@ public class VacanteForm {
             facesContext.renderResponse();
             
         }
+    }
+
+    /**
+     * @return the comentarioEnviado
+     */
+    public boolean isComentarioEnviado() {
+        return comentarioEnviado;
+    }
+
+    /**
+     * @param comentarioEnviado the comentarioEnviado to set
+     */
+    public void setComentarioEnviado(boolean comentarioEnviado) {
+        this.comentarioEnviado = comentarioEnviado;
+    }
+    
+    public void ocultaComentario(ActionEvent actionEvent){
+        this.comentarioEnviado = !this.comentarioEnviado;
     }
     
 }

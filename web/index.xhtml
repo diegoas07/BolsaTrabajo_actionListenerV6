@@ -38,7 +38,7 @@
                             <h:message for="apellido"/>
                         </td>
                     </tr>
-                    
+
                     <tr>
                         <td>
                             <h:outputLabel for="sueldoDeseado" value="#{msgs['vacanteForm.sueldoDeseado']}"/>
@@ -65,7 +65,7 @@
                             <h:message for="fechaNacimiento"/>
                         </td>
                     </tr>
-                    
+
                     <tr>
                         <td>
                             <h:outputLabel for="ciudad" value ="#{msgs['vacanteForm.ciudad']}"/>
@@ -77,7 +77,7 @@
                             <h:message for="ciudad" />
                         </td>
                     </tr>
-                    
+
                     <tr>
                         <td>
                             <h:outputLabel for="colonia" value ="#{msgs['vacanteForm.colonia']}"/>
@@ -89,24 +89,24 @@
                             <h:message for="colonia" />
                         </td>
                     </tr>
-                    
+
                     <tr>
                         <td>
                             <h:outputLabel for="codigoPostal" value="#{msgs['vacanteForm.codigoPostal']}" />
                         </td>
                         <td>
                             <h:inputText id="codigoPostal" immediate="true" onchange="this.form.submit()" required="true"
-                                    value="#{candidato.codigoPostal}" valueChangeListener="#{vacanteForm.codigoPostalListener}"/>
+                                         value="#{candidato.codigoPostal}" valueChangeListener="#{vacanteForm.codigoPostalListener}"/>
                         </td>
                         <td>
                             <h:message for="codigoPostal" />
                         </td>
                     </tr>
-                    
+
                 </tbody>
             </table>
-            
-                        <table>
+
+            <table>
                 <tr>
                     <td>
                         <h:commandLink actionListener="#{vacanteForm.ocultaComentario}" immediate="true" rendered="#{!vacanteForm.comentarioEnviado}" value="#{msgs['vacanteForm.mostrar']}"/>
@@ -128,7 +128,7 @@
                     </tr>
                 </table>
             </h:panelGroup>
-            
+
             <br/>
             <h:commandButton action="#{vacanteForm.enviar}" value="#{msgs['vacanteForm.Enviar']}"/>
         </h:form>
